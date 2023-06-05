@@ -1,5 +1,2 @@
 #!/bin/bash
-mkdir inline_code.py
-chmod 777 inline_code.py
-echo $PYCODE > inline_code.py
-python3 inline_code.py
+python3 -c $PYCODE
