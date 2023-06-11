@@ -6,10 +6,11 @@ if __name__ == "__main__":
     args = sys.argv
 
     if len(args) == 1:
-        print("{:d} argument.".format(0))
+        print("0 arguments.")
+    elif len(args) == 2:
+        print("1 argument:")
     else:
-        print("{:d} argument:".format(len(args) - 1))
-
+        print("{:d} arguments:".format(len(args) - 1))
     for i, item in enumerate(args):
         if i == 0:
             continue
