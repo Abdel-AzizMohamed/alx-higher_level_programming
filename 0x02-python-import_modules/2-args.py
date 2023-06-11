@@ -8,7 +8,7 @@ if __name__ == "__main__":
     if len(args) == 1:
         print("{:d} argument.".format(0))
     else:
-        print("{:d} argument:".format(len(args)))
+        print("{:d} argument:".format(len(args) - 1))
 
     for i, item in enumerate(args):
         if i == 0:
