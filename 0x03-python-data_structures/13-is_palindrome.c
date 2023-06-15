@@ -28,6 +28,8 @@ int is_palindrome(listint_t **head)
 		if (numbers_list[i] != numbers_list[j - 1])
 			return (0);
 	}
-
+	for (i = 0; i < len; i++)
+		free(numbers_list[i]);
+	free(numbers_list);
 	return (1);
 }
