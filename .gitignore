@@ -10,3 +10,6 @@
 
 #linux ignore
 *.sh
+
+#my ignore
+flags
