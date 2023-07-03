@@ -21,7 +21,9 @@ class Square():
         return self.__size ** 2
 
     def my_print(self, last=True):
-        if self.size == 0 and last:
+        if self.size == 0:
+            if not last:
+                return ""
             print("")
             return 0
 
