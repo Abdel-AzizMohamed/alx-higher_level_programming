@@ -14,14 +14,14 @@ class Square():
         self.size = size
         self.position = position
 
-    def __str__(self): 
+    def __str__(self):
         return "{}".format(self.my_print(False))
 
     def area(self):
         return self.__size ** 2
 
     def my_print(self, last=True):
-        if self.size == 0:
+        if self.size == 0 and last:
             print("")
             return 0
 
