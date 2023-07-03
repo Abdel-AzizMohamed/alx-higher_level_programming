@@ -4,6 +4,7 @@
 
 
 class MagicClass():
+        """Define a new MagicClass Object"""
     def __init__(self, radius=0):
         """Initalize a new object
 
