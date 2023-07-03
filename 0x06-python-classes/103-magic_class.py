@@ -2,6 +2,8 @@
 
 """Define a magic class"""
 
+import math
+
 
 class MagicClass():
     """Define a new MagicClass Object"""
