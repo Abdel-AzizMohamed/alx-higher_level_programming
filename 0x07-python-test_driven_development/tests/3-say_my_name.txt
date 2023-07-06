@@ -1,0 +1,61 @@
+Usege:
+======
+>>> fun = __import__("3-say_my_name").say_my_name
+>>> fun("aziz", "mohamed")
+My name is aziz mohamed
+
+>>> fun("omar")
+My name is omar 
+
+Errors:
+=======
+
+Bad First_name Values:
+---------------------
+>>> fun(1, "test")
+Traceback (most recent call last):
+TypeError: first_name must be a string
+
+>>> fun(1.2, "test")
+Traceback (most recent call last):
+TypeError: first_name must be a string
+
+>>> fun(True, "test")
+Traceback (most recent call last):
+TypeError: first_name must be a string
+
+>>> fun(None, "test")
+Traceback (most recent call last):
+TypeError: first_name must be a string
+
+>>> fun(float("inf"), "test")
+Traceback (most recent call last):
+TypeError: first_name must be a string
+
+Bad last_name Values:
+---------------------
+>>> fun("test", 1)
+Traceback (most recent call last):
+TypeError: last_name must be a string
+
+>>> fun("test", 1.2)
+Traceback (most recent call last):
+TypeError: last_name must be a string
+
+>>> fun("test", True)
+Traceback (most recent call last):
+TypeError: last_name must be a string
+
+>>> fun("test", None)
+Traceback (most recent call last):
+TypeError: last_name must be a string
+
+>>> fun("test", float("inf"))
+Traceback (most recent call last):
+TypeError: last_name must be a string
+
+Bad Function Struct:
+--------------------
+>>> fun()
+Traceback (most recent call last):
+TypeError: say_my_name() missing 1 required positional argument: 'first_name'
