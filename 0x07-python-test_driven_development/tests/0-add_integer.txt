@@ -1,0 +1,33 @@
+How to use 0-add_integer.py
+===========================
+
+Usege: with numbers
+==================
+
+basic numbers:
+>>> add_integer(1, 2)
+3
+
+negative numbers:
+>>> add_integer(-2, 2)
+0
+
+float numbers well be converted to ineteger first:
+>>> add_integer(2.7, 3.3)
+5
+
+negative float numbers:
+>>> add_integer(-2.7, -3.3)
+-5
+
+float with non-float number:
+>>> add_integer(2.7, 3)
+5
+
+Uesge: With non-numbers:
+========================
+
+string will raise typeerorr:
+>>> add_integer("3", 3)
+Traceback (most recent call last):
+TypeError: a must be an integer
