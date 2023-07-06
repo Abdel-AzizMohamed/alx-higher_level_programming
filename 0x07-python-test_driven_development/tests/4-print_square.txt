@@ -1,0 +1,55 @@
+Uesge:
+=====
+
+>>> fun = __import__("4-print_square").print_square
+>>> fun(4)
+####
+####
+####
+####
+
+>>> fun(True)
+#
+
+Errors:
+=======
+
+Bad size Values:
+----------------
+>>> fun(4.4)
+Traceback (most recent call last):
+TypeError: size must be an integer
+
+>>> fun("3")
+Traceback (most recent call last):
+TypeError: size must be an integer
+
+>>> fun(None)
+Traceback (most recent call last):
+TypeError: size must be an integer
+
+>>> fun(float("inf"))
+Traceback (most recent call last):
+TypeError: size must be an integer
+
+>>> fun([])
+Traceback (most recent call last):
+TypeError: size must be an integer
+
+>>> fun({})
+Traceback (most recent call last):
+TypeError: size must be an integer
+
+>>> fun(())
+Traceback (most recent call last):
+TypeError: size must be an integer
+
+>>> fun(-1)
+Traceback (most recent call last):
+ValueError: size must be >= 0
+
+Bad Function Struct:
+--------------------
+>>> fun()
+Traceback (most recent call last):
+TypeError: print_square() missing 1 required positional argument: 'size'
