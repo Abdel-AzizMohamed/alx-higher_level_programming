@@ -11,6 +11,12 @@ basic numbers:
 3
 ::
 
+1 number only be default b = 98:
+::
+>>> add_integer(1)
+99
+::
+
 negative numbers:
 ::
 >>> add_integer(-2, 2)
