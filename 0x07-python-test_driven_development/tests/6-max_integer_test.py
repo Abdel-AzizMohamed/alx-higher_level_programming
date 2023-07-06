@@ -10,6 +10,8 @@ class TextMax(unittest.TestCase):
     def test_max_integer(self):
         result = fun([1, 2, 3])
         self.assertEqual(result, 3)
+        result = fun([1])
+        self.assertEqual(result, 1)
         result = fun([3, 1, 2])
         self.assertEqual(result, 3)
         result = fun([-3, 1, -5])
