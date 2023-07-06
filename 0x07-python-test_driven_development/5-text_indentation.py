@@ -5,7 +5,6 @@
         text_indentation(string)
 """
 
-import doctest
 
 def text_indentation(text):
     """prints out text splited by chars each in line
@@ -30,5 +29,3 @@ def text_indentation(text):
             continue
         print(text[i], end="")
         i += 1
-
-doctest.testfile("tests/5-text_indentation.txt")
