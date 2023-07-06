@@ -1,9 +1,21 @@
 #!/usr/bin/python3
 
-"""Define matrix divied"""
+"""Define matrix divied
+
+   Functions:
+        matrix_divided
+"""
 
 
 def matrix_divided(matrix, div):
+    """Divied given matrix by a number
+
+        Args:
+            matrix (list): the given matrix
+            div (int, float): divider
+        Return:
+            new matrix divided by div
+    """
     if not isinstance(div, int) and not isinstance(div, float):
         raise TypeError("div must be a number")
     if div == 0:
