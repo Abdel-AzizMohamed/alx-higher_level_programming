@@ -31,12 +31,12 @@ def matrix_divided(matrix, div):
         for column in row:
             if not isinstance(column, int) and not isinstance(column, float):
                 raise TypeError("matrix must be a matrix (list of lists)\
-                                of integers/floats")
+of integers/floats")
             if div == float("inf"):
-                new_list.append(0.0)
+                new_list.append(round(0, 2))
                 continue
             elif div == float("-inf"):
-                new_list.append(-0.0)
+                new_list.append(round(-0, 2))
                 continue
             new_list.append(round(column / div, 2))
 
