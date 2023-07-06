@@ -3,11 +3,11 @@ Uesge:
 
 >>> fun = __import__("5-text_indentation").text_indentation
 >>> fun("hello.how are you?test:last line")
-hello
+hello.
 <BLANKLINE>
-how are you
+how are you?
 <BLANKLINE>
-test
+test:
 <BLANKLINE>
 last line
 
