@@ -27,5 +27,3 @@ def text_indentation(text):
                 i += 1
             print("\n")
         i += 1
-
-text_indentation("Holberton. School? How are you: John")

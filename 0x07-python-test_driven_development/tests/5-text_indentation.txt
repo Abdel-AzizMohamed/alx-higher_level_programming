@@ -2,6 +2,7 @@ Uesge:
 ======
 
 >>> fun = __import__("5-text_indentation").text_indentation
+
 >>> fun("hello.how are you?test:last line")
 hello.
 <BLANKLINE>
