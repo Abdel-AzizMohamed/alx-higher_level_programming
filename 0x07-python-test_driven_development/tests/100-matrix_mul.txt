@@ -18,10 +18,6 @@ TypeError: m_a should contain only integers or floats
 Traceback (most recent call last):
 TypeError: m_a should contain only integers or floats
 
->>> fun([[float("inf"), 2], [3, 4]], [[1, 2], [3, 4]])
-Traceback (most recent call last):
-TypeError: m_a should contain only integers or floats
-
 >>> fun([[[], 2], [3, 4]], [[1, 2], [3, 4]])
 Traceback (most recent call last):
 TypeError: m_a should contain only integers or floats
@@ -41,10 +37,6 @@ Traceback (most recent call last):
 TypeError: m_b should contain only integers or floats
 
 >>> fun([[1, 2], [3, 4]], [[None, 2], [3, 4]])
-Traceback (most recent call last):
-TypeError: m_b should contain only integers or floats
-
->>> fun([[1, 2], [3, 4]], [[float("inf"), 2], [3, 4]])
 Traceback (most recent call last):
 TypeError: m_b should contain only integers or floats
 
@@ -70,10 +62,6 @@ TypeError: m_b should contain only integers or floats
 Traceback (most recent call last):
 TypeError: m_b should contain only integers or floats
 
->>> fun([[1, 2], [3, 4]], [[float("inf"), 2], [3, 4]])
-Traceback (most recent call last):
-TypeError: m_b should contain only integers or floats
-
 >>> fun([[1, 2], [3, 4]], [[[], 2], [3, 4]])
 Traceback (most recent call last):
 TypeError: m_b should contain only integers or floats
@@ -88,31 +76,31 @@ TypeError: m_b should contain only integers or floats
 
 Bad matrix a Struct:
 --------------------
->>> fun(["a", [[1, 2], [3, 4]])
+>>> fun("a", [[1, 2], [3, 4]])
 Traceback (most recent call last):
 TypeError: m_a must be a list
 
->>> fun([True, [[1, 2], [3, 4]])
+>>> fun(True, [[1, 2], [3, 4]])
 Traceback (most recent call last):
 TypeError: m_a must be a list
 
->>> fun([1, [[1, 2], [3, 4]])
+>>> fun(1, [[1, 2], [3, 4]])
 Traceback (most recent call last):
 TypeError: m_a must be a list
 
->>> fun([2.2, [[1, 2], [3, 4]])
+>>> fun(2.2, [[1, 2], [3, 4]])
 Traceback (most recent call last):
 TypeError: m_a must be a list
 
->>> fun([(), [[1, 2], [3, 4]])
+>>> fun((), [[1, 2], [3, 4]])
 Traceback (most recent call last):
 TypeError: m_a must be a list
 
->>> fun([{}, [[1, 2], [3, 4]])
+>>> fun({}, [[1, 2], [3, 4]])
 Traceback (most recent call last):
 TypeError: m_a must be a list
 
->>> fun([[], [[1, 2], [3, 4]])
+>>> fun([], [[1, 2], [3, 4]])
 Traceback (most recent call last):
 ValueError: m_a can't be empty
 
@@ -164,14 +152,14 @@ TypeError: m_b must be a list of lists
 
 Bad Function Struct:
 --------------------
->>> fun([[1, 2], [3, 4]], [[1, 2, 3], [4, 5, 6]])
+>>> fun([[1]], [[1, 2, 3], [4, 5, 6]])
 Traceback (most recent call last):
-ValueError: m_a and m_b can't be multiplied 
+ValueError: m_a and m_b can't be multiplied
 
 >>> fun([[1, 2], [3, 4]])
 Traceback (most recent call last):
-ValueError:
+TypeError: matrix_mul() missing 1 required positional argument: 'm_b'
 
 >>> fun()
 Traceback (most recent call last):
-ValueError:
+TypeError: matrix_mul() missing 2 required positional arguments: 'm_a' and 'm_b'
