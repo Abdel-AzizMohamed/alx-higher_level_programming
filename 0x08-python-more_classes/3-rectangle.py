@@ -26,6 +26,13 @@ class Rectangle():
         self.width = width
         self.height = height
 
+    def __str__(self):
+        for i in range(self.__height - 1):
+            for j in range(self.__width):
+                print("#", end="")
+            print("")
+        return "#" * self.__width
+
     @property
     def width(self):
         return self.__width
