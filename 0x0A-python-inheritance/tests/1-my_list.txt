@@ -1,0 +1,12 @@
+Usege:
+======
+>>> obj = __import__("1-my_list").MyList()
+>>> obj.append(4)
+>>> obj.append(3)
+>>> obj.append(1)
+>>> obj.append(2)
+
+>>> print(obj)
+[4, 3, 1, 2]
+>>> obj.print_sorted()
+[1, 2, 3, 4]
