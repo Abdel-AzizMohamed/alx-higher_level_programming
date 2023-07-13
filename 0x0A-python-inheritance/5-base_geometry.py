@@ -3,4 +3,5 @@
 
 
 class BaseGeometry():
+    """Define BaseGeomatry Object"""
     pass
