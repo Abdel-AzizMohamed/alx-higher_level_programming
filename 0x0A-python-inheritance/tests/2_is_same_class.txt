@@ -1,0 +1,7 @@
+Usege:
+======
+>>> fun = __import__("2-is_same_class").is_same_class
+>>> fun(1, int)
+True
+>>> fun("test", float)
+False
