@@ -1,0 +1,15 @@
+Usege:
+======
+
+>>> fun = __import__("7-base_geometry").BaseGeometry()
+>>> fun.area()
+Traceback (most recent call last):
+Exception: area() is not implemented
+>>> fun.integer_validator("test", 1)
+
+>>> fun.integer_validator("test", "test")
+Traceback (most recent call last):
+TypeError: test must be an integer
+>>> fun.integer_validator("test", 0)
+Traceback (most recent call last):
+ValueError: test must be greater than 0
