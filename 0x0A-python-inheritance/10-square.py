@@ -8,6 +8,15 @@ Rectangle = __import__('9-rectangle').Rectangle
 
 
 class Square(Rectangle):
+    """Define Square object
+
+        Magic Methods:
+            __init__(self, size)
+            __str__(self)
+
+        Methods:
+            area(self)
+    """
     def __init__(self, size):
         super().integer_validator("size", size)
         self.__size = size
