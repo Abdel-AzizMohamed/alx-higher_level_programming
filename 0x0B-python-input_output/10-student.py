@@ -26,7 +26,7 @@ class Student():
     def to_json(self, attrs=None):
         """Return a dictionary representation of the student"""
         obj_dict = self.__dict__
-        if attrs:
+        if isinstance(attrs, list):
             new_dict = {}
             for attr in attrs:
                 if attr in obj_dict:
