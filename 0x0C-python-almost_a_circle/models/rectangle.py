@@ -96,8 +96,13 @@ class Rectangle(Base):
 
         return str_rep.format(self.id, x, y, wd, hi)
 
-    def update(self, *args):
+    def update(self, *args, **kwargs):
         """update object attributes"""
+        if not args:
+            for key, value in kwargs.items():
+                setattr(self, key, value)
+            return (0)
+
         if len(args) >= 1:
             self.id = args[0]
         if len(args) >= 2:
