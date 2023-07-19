@@ -13,8 +13,8 @@ class Square(Rectangle):
                 x(int): x-axis of the square
                 y(int): y-axis of the square
                 id(int): id of the square
-        super().__init__(size, size, x, y, id)
         """
+        super().__init__(size, size, x, y, id)
 
     def __str__(self):
         """return a string reperstintion of square object"""
