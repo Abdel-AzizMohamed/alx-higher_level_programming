@@ -88,3 +88,8 @@ class TestRectangle_methods(unittest.TestCase):
         rect_1.update(1, 10, 5, height=3, width=4)
         self.assertEqual(rect_1.width, 10)
         self.assertEqual(rect_1.height, 5)
+
+    def test_to_dict(self):
+        rect_1 = Rectangle(10, 5, 2, 4)
+        new_dict = {'height': 5, 'id': 8, 'width': 10, 'x': 2, 'y': 4}
+        self.assertEqual(rect_1.to_dictionary(), new_dict)

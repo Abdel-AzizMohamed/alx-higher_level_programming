@@ -11,7 +11,7 @@ class TestRectangle_init(unittest.TestCase):
         self.assertEqual(sq_1.height, 10)
         self.assertEqual(sq_1.x, 2)
         self.assertEqual(sq_1.y, 4)
-        self.assertEqual(sq_1.id, 17)
+        self.assertEqual(sq_1.id, 18)
 
     def test_str(self):
         sq_1 = Square(10, 2, 4, 3)
