@@ -5,6 +5,7 @@ from models.base import Base
 
 class Rectangle(Base):
     """Define a new rect object"""
+
     def __init__(self, width, height, x=0, y=0, id=None):
         """init a new rect object"""
         super().__init__(id)
@@ -15,10 +16,12 @@ class Rectangle(Base):
 
     @property
     def width(self):
+        """width getter method"""
         return self.__width
 
     @width.setter
     def width(self, value):
+        """width setter method"""
         if type(value) != int:
             raise TypeError("width must be an integer")
         if value <= 0:
@@ -27,10 +30,12 @@ class Rectangle(Base):
 
     @property
     def height(self):
+        """height getter method"""
         return self.__height
 
     @height.setter
     def height(self, value):
+        """height setter method"""
         if type(value) != int:
             raise TypeError("height must be an integer")
         if value <= 0:
@@ -39,10 +44,12 @@ class Rectangle(Base):
 
     @property
     def x(self):
+        """x getter method"""
         return self.__x
 
     @x.setter
     def x(self, value):
+        """x setter method"""
         if type(value) != int:
             raise TypeError("x must be an integer")
         if value < 0:
@@ -51,10 +58,12 @@ class Rectangle(Base):
 
     @property
     def y(self):
+        """y getter method"""
         return self.__y
 
     @y.setter
     def y(self, value):
+        """y setter method"""
         if type(value) != int:
             raise TypeError("y must be an integer")
         if value < 0:
@@ -62,9 +71,11 @@ class Rectangle(Base):
         self.__y = value
 
     def area(self):
+        """returns the area of the object"""
         return self.__width * self.__height
 
     def display(self):
+        """display the object by # sign"""
         for i in range(self.__y):
             print("")
 
@@ -76,6 +87,7 @@ class Rectangle(Base):
             print("")
 
     def __str__(self):
+        """return string representation"""
         wd = self.__width
         hi = self.__height
         x = self.__x
@@ -85,6 +97,7 @@ class Rectangle(Base):
         return str_rep.format(self.id, x, y, wd, hi)
 
     def update(self, *args):
+        """update object attributes"""
         if len(args) >= 1:
             self.id = args[0]
         if len(args) >= 2:
