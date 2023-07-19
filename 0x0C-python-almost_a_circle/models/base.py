@@ -62,5 +62,5 @@ class Base():
             with open("{}.json".format(cls.__name__), "r") as r:
                 data = cls.from_json_string(r.read())
                 return [cls.create(**item) for item in data]
-         except IOError:
+        except IOError:
             return []
