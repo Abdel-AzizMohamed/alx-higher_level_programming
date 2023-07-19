@@ -45,7 +45,19 @@ class Base():
 
     @classmethod
     def create(cls, **dictionary):
-        new_obj = cls(1, 1, 0, 0)
-        for key, value in dictionary.items():
-            new_obj.update(key=value)
-        return new_obj
+        if dictionary and dictionary != {}:
+            if cls.__name__ == "Rectangle":
+                new = cls(1, 1)
+            else:
+                new = cls(1)
+            new.update(**dictionary)
+            return new
+
+    @classmethod
+    def load_from_file(cls):
+        try:
+            with open("{}.json".format(cls.__name__), "r") as r:
+                data = cls.from_json_string(r.read())
+                return [cls.create(**item) for item in data]
+         except IOError:
+            return []
