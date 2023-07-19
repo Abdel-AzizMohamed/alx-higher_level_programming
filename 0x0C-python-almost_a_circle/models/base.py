@@ -45,6 +45,7 @@ class Base():
 
     @classmethod
     def create(cls, **dictionary):
+        """returns an instance with all attributes already set"""
         if dictionary and dictionary != {}:
             if cls.__name__ == "Rectangle":
                 new = cls(1, 1)
@@ -55,6 +56,7 @@ class Base():
 
     @classmethod
     def load_from_file(cls):
+        """returns a list of instances"""
         try:
             with open("{}.json".format(cls.__name__), "r") as r:
                 data = cls.from_json_string(r.read())
