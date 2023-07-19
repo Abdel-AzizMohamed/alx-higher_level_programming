@@ -115,6 +115,7 @@ class Rectangle(Base):
             self.__y = args[4]
 
     def to_dictionary(self):
+        """create a dictionary repr of rect object"""
         new_dict = {"id": self.id, "width": self.__width, 
                     "height": self.__height, "x": self.__x, "y": self.__y}
         return new_dict
