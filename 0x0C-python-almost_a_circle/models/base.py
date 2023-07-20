@@ -57,26 +57,6 @@ class Base():
             new.update(**dictionary)
             return new
 
-    @classmethod
-    def load_from_file(cls):
-        """returns a list of instances"""
-        try:
-            with open("{}.json".format(cls.__name__), "r") as r:
-                data = cls.from_json_string(r.read())
-                return [cls.create(**item) for item in data]
-        except IOError:
-            return []
-
-    @classmethod
-    def save_to_file_csv(cls, list_objs):
-        with open("{}.csv".format(cls.__name__), "a") as a:
-            for item in list_objs:
-                ob_wd = item.width
-                ob_he = item.height
-                ob_id = item.id
-                a.write("{},{},{},{},{}\n".format(ob_id, ob_wd, ob_he, item.x, item.y))
-
-    @classmethod
     def save_to_file_csv(cls, list_objs):
         """Write a csv file from a list of objects."""
         filename = cls.__name__ + ".csv"
