@@ -1,4 +1,4 @@
 #!/usr/bin/node
-function add (a, b) {
+add = function (a, b) {
   return (Number(a) + Number(b));
 }
