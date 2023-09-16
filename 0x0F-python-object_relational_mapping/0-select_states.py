@@ -13,7 +13,7 @@ if __name__ == "__main__":
 
     cr = db.cursor()
 
-    data = cr.execute("""SELECT * FROM states ORDER BY id ASC""")
+    cr.execute("""SELECT * FROM states ORDER BY id ASC""")
     fetched_data = data.fetchall()
     for row in fetched_data:
         print(row)
