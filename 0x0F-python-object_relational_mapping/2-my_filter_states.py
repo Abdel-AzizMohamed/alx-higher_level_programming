@@ -10,7 +10,8 @@ if __name__ == "__main__":
 
     cr = db.cursor()
 
-    cr.execute("SELECT * FROM states WHERE name='{}' ORDER BY id ASC".format(argv[4]))
+    cr.execute("SELECT * FROM states WHERE name LIKE BINARY '{}'\
+                ORDER BY id ASC".format(argv[4]))
     states_data = cr.fetchall()
     for row in states_data:
         print(row)
