@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+"""Select all objects from State table"""
 from sys import argv
 from model_state import Base, State
 from sqlalchemy import create_engine
