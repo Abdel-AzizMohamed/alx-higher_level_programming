@@ -4,12 +4,13 @@
 
 def find_peak(list_of_integers):
     """Finds a peak in list_of_integers"""
-    if len(list_of_integers) == 0 or list_of_integers is None:
+    if list_of_integers == [] or list_of_integers is None:
         return None
 
     low = 0
     high = len(list_of_integers)
-    mid = high // 2
+    mid = ((high - low) // 2) + low
+    mid = int(mid)
 
     if high == 1:
         return list_of_integers[0]
