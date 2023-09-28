@@ -9,7 +9,7 @@
 *.pyc
 
 #linux ignore
-*.sh
+#*.sh
 
 #my ignore
 flags
