@@ -1,8 +1,8 @@
 #!/usr/bin/python3
 """display your github id"""
+import sys
 import requests
 from requests.auth import HTTPBasicAuth
-from sys import argv
 
 
 if __name__ == '__main__':
