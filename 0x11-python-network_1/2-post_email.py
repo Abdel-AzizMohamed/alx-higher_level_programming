@@ -4,6 +4,7 @@ import urllib.request
 import urllib.parse
 import sys
 
+
 url = sys.argv[1]
 post_values = {"email": sys.argv[2]}
 post = urllib.parse.urlencode(post_values)
