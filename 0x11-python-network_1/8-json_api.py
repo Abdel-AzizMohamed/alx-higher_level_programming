@@ -10,6 +10,10 @@ if __name__ == "__main__":
         payload = {"q": ""}
     else:
         payload = {"q": sys.argv[1]}
-    req = requests.post(url, data=paylaod)
+    req = requests.post(url, data=payload)
 
-    print(req.text)
+    if req.text != {}:
+        print(req.text.get("id"))
+        print(req.text.get(name))
+    else:
+        print(No result)
