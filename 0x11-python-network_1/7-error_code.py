@@ -5,7 +5,7 @@ import sys
 
 
 if __name__ == "__main__":
-    url = argv[1]
+    url = sys.argv[1]
     req = requests.get(url)
 
     if req.status_code >= 400:
