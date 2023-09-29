@@ -12,8 +12,12 @@ if __name__ == "__main__":
         payload = {"q": sys.argv[1]}
     req = requests.post(url, data=payload)
 
-    if req.text != {}:
-        print(req.text.get("id"))
-        print(req.text.get(name))
-    else:
-        print(No result)
+    try:
+        json = r.json()
+        if json == {}:
+            print("No result")
+        else:
+            print("[{}] {}".format(response.get("id"), response.get("name")))
+
+    except ValueError:
+        print("Not a valid JSON")
